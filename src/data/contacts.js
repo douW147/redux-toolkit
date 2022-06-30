@@ -1,29 +1,31 @@
 import {v4 as uuid} from "uuid"
 
-const initialContacts = [
+const initialContactsState = [
     {id: uuid(),
     firstName: "SASha",
     lastName: "Stepanenko",
     email: "sashok11111232222",
-    number: "0984224620"},
+    phone: "0984224620"},
     {id: uuid(),
-    firstName: "SASha",
+    firstName: "Oleg",
     lastName: "Stepanenko",
-    email: "sashok11111232222",
-    number: "0984224620"},
+    email: "oleg1111232222",
+    phone: "0969101725"},
     {id: uuid(),
-    firstName: "SASha",
+    firstName: "Vadim",
     lastName: "Stepanenko",
-    email: "sashok11111232222",
-    number: "0984224620"},
+    email: "vados11111232222",
+    phone: "0679631217"},
     {id: uuid(),
-    firstName: "SASha",
+    firstName: "Natalia",
     lastName: "Stepanenko",
-    email: "sashok11111232222",
-    number: "0984224620"},
+    email: "nataly11111232222",
+    phone: "06752061430"},
     {id: uuid(),
-    firstName: "SASha",
+    firstName: "Lffa",
     lastName: "Stepanenko",
-    email: "sashok11111232222",
-    number: "0984224620"}
-]
+    email: "lffa11111232222",
+    phone: "0984454450"}
+];
+
+export default initialContactsState;

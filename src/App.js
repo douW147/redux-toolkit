@@ -1,9 +1,13 @@
 import React from "react";
-import { Contacts } from "./components"
+import { Contacts, Navbar } from "./components";
+import {Provider} from "react-redux";
+import store from "./store";
+
 function App() {
-    return <div>
+    return <Provider store={store}>
+            <Navbar/>
             <Contacts/>
-    </div>
+    </Provider>
     
 };
 

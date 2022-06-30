@@ -1,3 +1,3 @@
 import Contacts from "./contacts/Contacts";
-
-export {Contacts};
+import Navbar from "./navbar/Navbar"
+export {Contacts, Navbar};

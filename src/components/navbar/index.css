@@ -1,0 +1,11 @@
+.naavbar{
+    background-color: rgb(58, 145, 145);
+}
+
+.--width25{
+    width: 25% !important;
+}
+
+.form-group{
+    display: flex;
+}
