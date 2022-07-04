@@ -84,7 +84,7 @@ export const contactsExtraReducer = {
         const index = state.data.findIndex(contact => {
             return contact.id === action.payload.id
         });
-        state[index] = action.payload;
+        state.data[index] = action.payload;
         state.error = ""
     },
 

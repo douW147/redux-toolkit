@@ -2,7 +2,7 @@
   "contacts": [
     {
       "id": 1,
-      "firstName": "SaFAFS",
+      "firstName": "Sasha",
       "lastName": "Stepanenko",
       "email": "sashok11111232222",
       "phone": "0984224620"
@@ -34,13 +34,6 @@
       "lastName": "Stepanenko",
       "email": "lffa11111232222",
       "phone": "0984454450"
-    },
-    {
-      "id": "4e569b4b-bd5f-4a6a-8843-3aa22affd88a",
-      "firstName": "fef",
-      "lastName": "fe",
-      "email": "htyjhy",
-      "phone": "jtyj"
     }
   ]
 }

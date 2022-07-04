@@ -17,7 +17,7 @@ function Contacts() {
                 phone: ""} 
     }
 
-    const contacts = useSelector(state => state.contacts.data);
+    const contacts = useSelector(state => state.contacts);
     const status = useSelector(state => state.contacts.status);
     const dispatch = useDispatch();
     const [newContact, setNewContact] = useState(generateContatct());
@@ -100,7 +100,7 @@ function Contacts() {
                         </tr>
                     </thead>
                     <tbody>
-                        {contacts.map((contact, index) => {
+                        {contacts.data.map((contact, index) => {
                             return <tr key={contact.id}>
                                 <td>{index + 1}</td>
                                 <td>

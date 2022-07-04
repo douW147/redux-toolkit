@@ -26,7 +26,7 @@ export const addContactsThunk = createAsyncThunk(
 );
 
 export const editContactsThunk = createAsyncThunk(
-    "contacts/add",
+    "contacts/edit",
     async(editedContact) => {
         const response = await api({
             url: `/contacts/${editedContact.id}`,
@@ -38,7 +38,7 @@ export const editContactsThunk = createAsyncThunk(
 );
 
 export const deleteContactsThunk = createAsyncThunk(
-    "contacts/add",
+    "contacts/delete",
     async(id) => {
         const response = await api({
             url: `/contacts/${id}`,
