@@ -1,3 +1,6 @@
+import userSlice from "../slices/user";
+import initialContactsState from "../data/contacts";
+
 const contactsReducer = {
     add: (state, action) => {
         state.push(action.payload);
@@ -17,5 +20,15 @@ const contactsReducer = {
         state[index] = action.payload
     }
 };
+
+export const contactsExtraReducer = {
+    [userSlice.actions.login.type]: (state,action) => {
+        return initialContactsState;
+    },
+
+    [userSlice.actions.logout.type]: (state, action) => {
+        return [];
+    }
+}
 
 export default contactsReducer;
