@@ -1,0 +1,46 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "firstName": "SaFAFS",
+      "lastName": "Stepanenko",
+      "email": "sashok11111232222",
+      "phone": "0984224620"
+    },
+    {
+      "id": 2,
+      "firstName": "Oleg",
+      "lastName": "Stepanenko",
+      "email": "oleg1111232222",
+      "phone": "0969101725"
+    },
+    {
+      "id": 3,
+      "firstName": "Vadim",
+      "lastName": "Stepanenko",
+      "email": "vados11111232222",
+      "phone": "0679631217"
+    },
+    {
+      "id": 4,
+      "firstName": "Natalia",
+      "lastName": "Stepanenko",
+      "email": "nataly11111232222",
+      "phone": "06752061430"
+    },
+    {
+      "id": 5,
+      "firstName": "Lffa",
+      "lastName": "Stepanenko",
+      "email": "lffa11111232222",
+      "phone": "0984454450"
+    },
+    {
+      "id": "4e569b4b-bd5f-4a6a-8843-3aa22affd88a",
+      "firstName": "fef",
+      "lastName": "fe",
+      "email": "htyjhy",
+      "phone": "jtyj"
+    }
+  ]
+}

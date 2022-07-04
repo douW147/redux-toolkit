@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import contactsSlice from "../../slices/contacts";
 import {v4 as uuid} from "uuid";
 import "./index.css";
 import "../../store";
+import { fetchContactsThunk, addContactsThunk, editContactsThunk, deleteContactsThunk } from "../../thunks/contacts"
 
 function Contacts() {
 
@@ -16,10 +17,15 @@ function Contacts() {
                 phone: ""} 
     }
 
-    const contacts = useSelector(state => state.contacts); 
+    const contacts = useSelector(state => state.contacts.data);
+    const status = useSelector(state => state.contacts.status);
     const dispatch = useDispatch();
     const [newContact, setNewContact] = useState(generateContatct());
     const [editContact, setEditContact] = useState(generateContatct());
+
+    useEffect(()=> {
+        dispatch(fetchContactsThunk())
+    }, [dispatch])
 
     const handleInputChange = (event) => {
         setNewContact(oldCont => ({...oldCont, [event.target.id]: event.target.value}));
@@ -31,27 +37,29 @@ function Contacts() {
 
     const handleAddClick = (event) => {
         event.preventDefault();
-        dispatch(contactsSlice.actions.add(newContact));
+        dispatch(addContactsThunk(newContact));
         setNewContact(generateContatct);
         
     }
 
     const handleDeleteClick = (id) => {
-        dispatch(contactsSlice.actions.remove(id));
+        dispatch(deleteContactsThunk(id));
     } 
 
     const handleEdit = (contact) => {
         setEditContact(contact);
     }
     const handleSave = () => {
-        dispatch(contactsSlice.actions.update(editContact));
+        dispatch(editContactsThunk(editContact));
         setEditContact(generateContatct())
     }
 
     return <div className="row justify-content-center mt-3 --width100">
         <div className="col-lg-7 col-md-9 col-sm-11 shadow-lg">
             <div className="card-heading m-5 mb-4 border-bottom">
-                <h4>Contacts</h4>
+                <h4>Contacts
+                    {status === "pending" && <span>   loading...</span>}
+                </h4>
             </div>
             <div className="form-container m-5 mt-4 mb-1">
                 <details>
